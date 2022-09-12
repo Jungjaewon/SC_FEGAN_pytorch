@@ -39,4 +39,7 @@ Attribution-NonCommercial-ShareAlike 4.0 International
 
 ## To do
 - [ ] upgrade training code
-- [ ] upgrade color domain image
+- [ ] upgrade color domain image and training
+
+## Color Data by super pixel
+<img src='images/face_color_250.jpg' width='256'>
