@@ -1,0 +1,70 @@
+
+
+TRAINING_CONFIG:
+
+  WANDB: 'True'
+  EPOCH: 3000 # 500 10
+  IMG_SIZE: 512
+  BATCH_SIZE: 7
+  MODAL : "gan" # MASK ALL
+  SINGLE_CONV : 'True'
+
+  EDGE_DROP_RATIO: 0.0
+  COLOR_DROP_RATIO: 0.0
+  FACE_DROP_RATIO: 0.05
+
+  # lr and lambda
+  G_LR : 3e-4 # 3e-5
+  D_LR : 5e-4
+
+  D_CRITIC: 1 # 1
+  G_CRITIC: 3
+
+  D_L_SLOP: 0.1
+  G_L_SLOP: 0.1
+
+  LAMBDA_G_FAKE  : 0.5 # 1 0.5
+  LAMBDA_G_PERCEP : 50 # 100
+  LAMBDA_G_STYLE : 600000
+  LAMBDA_G_GT : 1 # 1 40 50 70
+  LAMBDA_G_TV : 10
+  ALPHA : 10 # 5
+
+  USE_TV_LOSS : 'True' # True
+
+  LAMBDA_D_FAKE  : 0.5
+  LAMBDA_D_REAL  : 0.5
+  LAMBDA_GP : 10
+
+  GAN_LOSS : 'lsgan' # lsgan, wgan, r1loss
+
+  # Optimizer
+  OPTIM : ADAM
+  BETA1: 0.5 # 0.0
+  BETA2: 0.999
+
+  # Settings
+  NUM_WORKER : 1
+  MODE : 'train' # 'test'
+  SEED : 0 # 0 means do not set seed
+
+  IMG_DIR : 'datasets'
+  TRAIN_DIR : 'SC_FEGAN_0_gan_loss'
+  LOG_DIR : 'logs'
+  SAMPLE_DIR : 'samples'
+  RESULT_DIR : 'results'
+  MODEL_DIR : 'models'
+
+  # GPU
+  GPU: 1
+
+  # Step Size
+  SAMPLE_STEP : 5 # epoch based
+  TEST_STEP : 50 # epoch based
+  LOG_STEP : 50 # iteration based
+  SAVE_STEP : 50 # epoch based
+  SAVE_START : 50
+  LR_DECAY_POLICY : 'LambdaLR' # LambdaLR, None, # ExponentialLR StepLR
+  # lr_schedule : https://sanghyu.tistory.com/113
+
+
